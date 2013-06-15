@@ -1,0 +1,10 @@
+
+2013-6-3
+0) 解决图片从新下载问题(某些网络环境不稳定情况下redownload)		(STILL IN)
+	adding redown function
+1) 确保插入数据库，读取输出都是 utf-8							(DONE)
+2) 从写下载图片，用 PIL.Image 保存为 jpeg 格式，保存进数据库及log 测试中	(DONE)
+	s = PIL.Image.open(StringIO.StringIO("img_data"))
+	if s.mode != "RGB":
+		s = s.convert("RGB")
+	s.save()
